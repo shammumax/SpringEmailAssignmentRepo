@@ -1,0 +1,3 @@
+Client - have application context related stuff to deal with Spring IOC
+DataSource is interface to collect data , data will come from 2 types of DB , one is MySQL and other is postgreSQL based on our requirement we will decide 
+EmailService used to configure which object to use for the DataSource interface and it will start sending emails...
