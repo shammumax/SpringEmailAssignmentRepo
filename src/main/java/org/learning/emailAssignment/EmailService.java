@@ -11,10 +11,16 @@ public class EmailService {
 
     private DataSource dataSource;
 
-    @Autowired
+    //constructor injection
+//    public EmailService(@Qualifier("postgreSQLImpl") DataSource dataSource) {
+//    this.dataSource = dataSource;
+//    }
 
-    public EmailService(@Qualifier("postgreSQLImpl") DataSource dataSource) {
-    this.dataSource = dataSource;
+
+    // setter injection
+    @Autowired
+    public void setDataSource(@Qualifier("mySQLImpl") DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
     public void emailTrigger(){
